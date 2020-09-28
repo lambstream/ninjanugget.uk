@@ -3,7 +3,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     // This option controls if and how source maps are generated.
@@ -48,7 +49,12 @@ module.exports = {
             inject: 'body',
             chunks: ['styles'],
             filename: 'index.html'
-        })
+        }),
+        new CopyPlugin({
+            patterns: [
+                { from: 'assets', to: 'assets' },
+            ],
+        }),
     ],
 
     // https://webpack.js.org/configuration/optimization/

@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.facebook {
+    animation-delay: 300ms;
+}
+
+.instagram {
+    animation-delay: 450ms;
+}
+
+.youtube {
+    animation-delay: 600ms;
+}
+
+.twitch {
+    animation-delay: 750ms;
+}
+
+.twitter {
+    animation-delay: 900ms;
+}
