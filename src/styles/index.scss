@@ -21,3 +21,63 @@
 .twitter {
     animation-delay: 900ms;
 }
+
+.ninja-star {
+    transform: rotate(-52deg);
+}
+
+.spin-left {
+    animation: 750ms linear 800ms 1.25 normal none running spin-left;
+}
+
+.fly-in {
+    animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 800ms;
+}
+
+@-webkit-keyframes spin-left {
+    from {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg);
+    }
+    to {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes spin-left {
+    from {
+        -webkit-transform: rotate(405deg);
+        transform: rotate(405deg);
+    }
+    to {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+
+@-webkit-keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
